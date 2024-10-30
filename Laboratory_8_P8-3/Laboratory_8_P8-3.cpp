@@ -15,8 +15,13 @@ int convertRomanToInt(string s);
 
 int main() {
 
-	string test = "IV";
-	cout << convertRomanToInt(test);
+	string input; 
+	while (true) {
+		cout << "Enter Roman number or Q to quit: ";
+		getline(cin, input); 
+		if (input == "Q" || input == "q") break; 
+		cout << input << " = " << convertRomanToInt(input) << endl;
+	}
 
 	return 0;
 }
